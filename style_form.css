@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-bottom: 50px;
+}
+
+.top-bar {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-bar h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 20px; 
+}
+
+.user-info span, .user-info a {
+    color: #555;
+}
+
+.user-info a {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s; 
+}
+
+.user-info a:hover {
+    background-color: #0056b3;
+}
+
+.cadastro, .questionario {
+    max-width: 800px;
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.questionario table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.questionario td, .questionario th.mas {
+    padding: 10px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.mas {
+    text-align: center;
+    font-weight: bold;
+    color: #ff0000;
+    width: 50px; 
+}
+
+.questionario input[type="radio"], .questionario label {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.questionario button, .navigation-button {
+    width: auto; 
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block; 
+}
+
+.questionario button:hover, .navigation-button:hover {
+    background-color: #0056b3;
+}
+
+.form-page, #submit-button {
+    display: none;
+}
+
+.form-page.active {
+    display: block;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #eee;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #007bff;
+    width: 0%;
+    transition: width 0.4s ease;
+}

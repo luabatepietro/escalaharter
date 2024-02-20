@@ -1,0 +1,442 @@
+/* ESTILO GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight:900;
+}
+
+body {
+    height: 100vh;
+    color: #333; 
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.contato button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 900;
+    background-color: rgb(255, 250, 240);
+    color: #FF3900;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+button:hover, form .enviar input:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: #FF3900; 
+    box-shadow: 0 2px 50px rgba(0, 0, 0, 0.1); 
+    padding: 20px 4%;
+    font-size: large;
+    font-weight:900;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #e74c3c; 
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 100px;
+    transition: transform 0.3s ease;
+}
+
+header nav ul li:hover {
+    transform: translateY(-5px); 
+}
+
+
+/* SOBRE */
+
+section.Sobre{
+    padding: 160px 4%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    z-index: 1;
+}
+
+.Sobre .img-sobre img {
+    width: 100%; 
+    height: auto; 
+}
+
+.Sobre h2 span{
+    color: #FF3900;
+}
+
+.Sobre p span{
+    color: #FF3900;
+    font-weight: 900;
+}
+
+.Sobre .flex {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 100px; 
+}
+
+.Sobre .img-sobre, .Sobre .txt-sobre {
+    flex: 1; 
+}
+
+.Sobre .txt-sobre h2{
+    padding: 20px;
+    text-align: center;
+    font-size: 46px;
+    line-height: 40px;
+    
+}
+
+/* BENEFICIOS */
+
+
+.Beneficios {
+    padding: 160px 4%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    z-index: 1;}
+
+.Beneficios .flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px; 
+    justify-content: center; 
+}
+
+.Beneficios h2{
+    font-size: 46px;
+    text-align: center;
+    padding: 10px;
+}
+
+.Beneficios h3 {
+    text-align: center;
+    font-size: medium;
+}
+
+.Beneficios .flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+
+.Beneficios .beneficios-box {
+    height: 300px; 
+    overflow: auto;
+    color: #333; 
+    background-color: #FFF; 
+    border: 2px solid #FF3900;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 30px;
+    border-radius: 10px; 
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Beneficios .beneficios-box .linha-separadora {
+    width: 100%; 
+    height: 2px;
+    background-color: #FF3900; 
+    margin: 10px 0; 
+}
+
+.Beneficios .beneficios-box:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.Beneficios .beneficios-box h3 {
+    font-size: 24px; 
+    margin-bottom: 20px;
+    text-align: left; 
+}
+
+/* FAQ */
+
+
+#faq {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1450px; 
+    margin: 0 auto; 
+    padding: 60px;
+
+}
+
+
+.faq-content {
+    flex: 1;
+    padding-right: 20px; 
+}
+
+.faq-content h2 {
+    font-size: 46px; 
+    text-align: center;
+    margin: 50px 0;
+}
+
+.faq-content h2 span{
+    color: #FF3900;
+    font-size: 46px; 
+    text-align: center;
+    margin: 50px 0;
+}
+
+.accordion {
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    width: 100%; 
+    box-sizing: border-box;
+    transition: none;
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.panel p {
+    color: #FF3900;
+    padding: 0.5em 1em;
+    margin: 0;
+}
+
+.faq-image {
+    flex: none; 
+    padding-left: 20px; 
+}
+
+.faq-image img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+@media (max-width: 768px) {
+    #faq {
+        flex-direction: column;
+    }
+
+    .faq-content, .faq-image {
+        padding-right: 0;
+        padding-left: 0;
+        max-width: 100%;
+    }
+}
+
+
+
+/* INICIAR */
+
+
+.Iniciar {
+    padding: 80px 4%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    z-index: 1;
+}
+
+.Iniciar h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.Iniciar h3{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 80px;
+}
+
+form input {
+    width: 100%;
+    background-color: rgb(237, 235, 235);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color:rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 900;
+    background-color: #FF3900;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.Iniciar .cadastrar a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+.Iniciar .cadastrar button{
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 900;
+    background-color: #FF3900;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.Iniciar .cadastrar {
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+/* RODAPÉ */
+
+
+footer {
+    background-color: #333; 
+    color: #fff; 
+    font-size: 16px; 
+    line-height: 1.5; 
+    padding: 20px 0; 
+}
+
+.footer .interface {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.line-footer {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap; 
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.social, .newsletter {
+    margin-bottom: 20px; 
+}
+
+.social p, .social a {
+    margin-right: 15px; 
+    color: #fff; 
+    text-decoration: none; 
+}
+
+
+.copy {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+@media (max-width: 768px) {
+    .line-footer {
+        flex-direction: column; 
+    }
+
+    .social, .newsletter {
+        text-align: center; 
+    }
+}
+
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Sobre .flex, .Iniciar .flex {
+        flex-direction: column;
+    }
+
+    header .menu-desktop ul {
+        flex-direction: column;
+    }
+
+    header .menu-desktop ul li {
+        padding: 10px 0;
+    }
+
+    
+    
+}
+
+/* FORMULARIO  */
